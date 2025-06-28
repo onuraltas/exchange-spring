@@ -38,7 +38,7 @@
 - You need a JWT token to run backend services. You can use "login" endpoint with existing user or also can create a new user with "register" endpoint.
 - Services need a Bearer JWT token in header.
 - You should run first "notify/stream" for server send event notifications. The notifications are pushed from server to postman asynchronously.
-- "account", "account/balance", "account/deposit", "account/deposit" and "exchange" endpoints can be tested.
+- "account", "account/balance", "account/deposit", "account/deposit" and "exchange" endpoints can be tested with postman.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
