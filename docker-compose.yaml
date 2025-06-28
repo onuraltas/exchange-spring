@@ -1,0 +1,28 @@
+services:
+  rabbitmq:
+    image: rabbitmq:4-management
+    container_name: rabbitmq-dc-server
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+  redis:
+    image: redis:7
+    container_name: redis-dc-server
+    restart: always
+    ports:
+      - 6379:6379
+  exchange-app:
+    image: exchange-spring-image
+    container_name: exchange-spring-container
+    ports:
+      - 80:80
+    environment:
+      SPRING_APPLICATION_NAME: exchange-spring
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379

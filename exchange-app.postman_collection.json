@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "f8c48fd0-657f-4b65-8fa1-fb79e4f5d68f",
+		"name": "Exchange App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33028019"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"newuser@gmail.com\",\r\n    \"name\": \"New User\",\r\n    \"password\": \"12345678\",\r\n    \"passwordConfirm\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/rest/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"rest",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"testuser@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/rest/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"rest",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notify/stream",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTEwOTQyMDcsImV4cCI6MTc4MjE5ODIwN30.wjHl3doHTb19E3c3vM3n5BjaLk0woCLvJZdSrKp3QvRWwTdCI7r__iWxfeeRkxnjoMksvTCobP3y2IDXtxNapQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:80/rest/notify/stream",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"rest",
+						"notify",
+						"stream"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "account",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTEwOTQyMDcsImV4cCI6MTc4MjE5ODIwN30.wjHl3doHTb19E3c3vM3n5BjaLk0woCLvJZdSrKp3QvRWwTdCI7r__iWxfeeRkxnjoMksvTCobP3y2IDXtxNapQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:80/rest/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"rest",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "account/balance",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTEwOTQyMDcsImV4cCI6MTc4MjE5ODIwN30.wjHl3doHTb19E3c3vM3n5BjaLk0woCLvJZdSrKp3QvRWwTdCI7r__iWxfeeRkxnjoMksvTCobP3y2IDXtxNapQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:80/rest/account/balance/USD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"rest",
+						"account",
+						"balance",
+						"USD"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "account/deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTEwOTQyMDcsImV4cCI6MTc4MjE5ODIwN30.wjHl3doHTb19E3c3vM3n5BjaLk0woCLvJZdSrKp3QvRWwTdCI7r__iWxfeeRkxnjoMksvTCobP3y2IDXtxNapQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currencyCode\": \"TRY\",\r\n    \"amount\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/rest/account/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"rest",
+						"account",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "account/withdraw",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTEwOTQyMDcsImV4cCI6MTc4MjE5ODIwN30.wjHl3doHTb19E3c3vM3n5BjaLk0woCLvJZdSrKp3QvRWwTdCI7r__iWxfeeRkxnjoMksvTCobP3y2IDXtxNapQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currencyCode\": \"USD\",\r\n    \"amount\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/rest/account/withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"rest",
+						"account",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exchange",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTEwOTQyMDcsImV4cCI6MTc4MjE5ODIwN30.wjHl3doHTb19E3c3vM3n5BjaLk0woCLvJZdSrKp3QvRWwTdCI7r__iWxfeeRkxnjoMksvTCobP3y2IDXtxNapQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceCurrencyCode\": \"TRY\",\r\n    \"targetCurrencyCode\": \"USD\",\r\n    \"amount\": 14\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/rest/exchange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"rest",
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

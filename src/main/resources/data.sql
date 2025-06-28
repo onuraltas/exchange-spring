@@ -1,0 +1,1 @@
+INSERT INTO `users` (`user_id`,`name`, `email`, `encrypted_password`) VALUES (101, 'Test User', 'testuser@gmail.com', '{bcrypt}$2a$10$/mw6kw0p1SvKKfP3OdK8LOacaHG9CoPw/oLjUz8ubXMSt8Wifi/Ei');
