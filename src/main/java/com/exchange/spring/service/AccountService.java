@@ -1,8 +1,7 @@
 package com.exchange.spring.service;
 
 import com.exchange.spring.dto.AccountDto;
-import com.exchange.spring.dto.message.DepositMessageDto;
-import com.exchange.spring.dto.message.WithdrawMessageDto;
+import com.exchange.spring.dto.message.TransactionMessageDto;
 import com.exchange.spring.dto.request.DepositRequestDto;
 import com.exchange.spring.dto.request.WithdrawRequestDto;
 import com.exchange.spring.dto.response.RetrieveBalanceResponseDto;
@@ -18,10 +17,8 @@ public interface AccountService {
 
     Mono<Boolean> startDeposit(DepositRequestDto requestDto);
 
-    void finishDeposit(DepositMessageDto messageDto);
-
     Mono<Boolean> startWithdraw(WithdrawRequestDto requestDto);
 
-    void finishWithdraw(WithdrawMessageDto messageDto);
+    void finishTransaction(TransactionMessageDto messageDto);
 
 }

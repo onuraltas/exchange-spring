@@ -1,7 +1,6 @@
 package com.exchange.spring.functions;
 
-import com.exchange.spring.dto.message.DepositMessageDto;
-import com.exchange.spring.dto.message.WithdrawMessageDto;
+import com.exchange.spring.dto.message.TransactionMessageDto;
 import com.exchange.spring.service.AccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
@@ -14,20 +13,11 @@ import java.util.function.Consumer;
 public class AccountFunctions {
 
     @Bean
-    public Consumer<DepositMessageDto> depositMessage(AccountService accountService) {
-        return depositMessageDto -> {
-            log.info("depositMessageDto : " + depositMessageDto);
+    public Consumer<TransactionMessageDto> transactionMessage(AccountService accountService) {
+        return transactionMessageDto -> {
+            log.info("transactionMessageDto : " + transactionMessageDto);
 
-            accountService.finishDeposit(depositMessageDto);
-        };
-    }
-
-    @Bean
-    public Consumer<WithdrawMessageDto> withdrawMessage(AccountService accountService) {
-        return withdrawMessageDto -> {
-            log.info("withdrawMessageDto : " + withdrawMessageDto);
-
-            accountService.finishWithdraw(withdrawMessageDto);
+            accountService.finishTransaction(transactionMessageDto);
         };
     }
 

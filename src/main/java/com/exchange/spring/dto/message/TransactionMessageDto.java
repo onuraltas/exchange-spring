@@ -1,5 +1,6 @@
 package com.exchange.spring.dto.message;
 
+import com.exchange.spring.enums.TransactionType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -12,7 +13,10 @@ import java.math.BigDecimal;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class WithdrawMessageDto {
+public class TransactionMessageDto {
+
+    @NotNull
+    private TransactionType transactionType;
 
     @NotNull
     @Positive

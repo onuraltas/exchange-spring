@@ -30,18 +30,13 @@ spring:
     import: "optional:configserver:"
   cloud:
     function:
-      definition: depositMessage;withdrawMessage
+      definition: transactionMessage
     stream:
       bindings:
-        depositMessage-out-0:
-          destination: deposit-message
-        depositMessage-in-0:
-          destination: deposit-message
-          group: ${spring.application.name}
-        withdrawMessage-out-0:
-          destination: withdraw-message
-        withdrawMessage-in-0:
-          destination: withdraw-message
+        transactionMessage-out-0:
+          destination: transaction-message
+        transactionMessage-in-0:
+          destination: transaction-message
           group: ${spring.application.name}
 
   rabbitmq:

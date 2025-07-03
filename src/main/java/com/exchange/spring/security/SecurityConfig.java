@@ -30,7 +30,6 @@ public class SecurityConfig {
     SecurityWebFilterChain springWebFilterChain(ServerHttpSecurity http,
                                                 JwtTokenProvider tokenProvider,
                                                 ReactiveAuthenticationManager reactiveAuthenticationManager) {
-        // final String PATH_REST = "/rest/**";
 
         return http.csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .httpBasic(ServerHttpSecurity.HttpBasicSpec::disable)
@@ -42,16 +41,6 @@ public class SecurityConfig {
                         .pathMatchers(HttpMethod.GET, "/swagger-ui/**").permitAll()
                         .pathMatchers(HttpMethod.GET, "/v3/**").permitAll()
                         .anyExchange().authenticated())
-                // .authorizeExchange(it -> it
-                //                 .pathMatchers("/rest/auth/*").permitAll()
-                //                 .pathMatchers("/rest/chat/stream").permitAll()
-                //                 .pathMatchers(HttpMethod.OPTIONS, PATH_REST).permitAll()
-                //                 .pathMatchers(HttpMethod.GET, PATH_REST).permitAll()
-                //                 .pathMatchers(HttpMethod.DELETE, PATH_REST).hasRole("ADMIN")
-                //                 .pathMatchers(PATH_REST).authenticated()
-                //                 .pathMatchers("/me").authenticated()
-                //                 .pathMatchers("/users/{user}/**").access(this::currentUserMatchesPath)
-                //                 .anyExchange().permitAll())
                 .addFilterAt(new JwtTokenAuthenticationFilter(tokenProvider), SecurityWebFiltersOrder.HTTP_BASIC)
                 .build();
 

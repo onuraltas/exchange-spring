@@ -1,13 +1,13 @@
 package com.exchange.spring.service.impl;
 
 import com.exchange.spring.dto.AccountDto;
-import com.exchange.spring.dto.message.DepositMessageDto;
-import com.exchange.spring.dto.message.WithdrawMessageDto;
+import com.exchange.spring.dto.message.TransactionMessageDto;
 import com.exchange.spring.dto.request.DepositRequestDto;
 import com.exchange.spring.dto.request.WithdrawRequestDto;
 import com.exchange.spring.dto.response.RetrieveBalanceResponseDto;
 import com.exchange.spring.entity.Account;
 import com.exchange.spring.enums.ExceptionMessage;
+import com.exchange.spring.enums.TransactionType;
 import com.exchange.spring.exception.CustomizedException;
 import com.exchange.spring.mapper.AccountMapper;
 import com.exchange.spring.model.CommonServerEvent;
@@ -83,14 +83,9 @@ public class AccountServiceImpl implements AccountService {
             throw new CustomizedException(ExceptionMessage.UNKNOWN_CURRENCY, currencyCode);
         }
 
-        var depositMessage = new DepositMessageDto(userId, currencyCode, amount);
+        var transactionMessage = new TransactionMessageDto(TransactionType.DEPOSIT, userId, currencyCode, amount);
 
-        streamBridge.send("depositMessage-out-0", depositMessage);
-    }
-
-    @Override
-    public void finishDeposit(DepositMessageDto messageDto) {
-        this.finishDeposit(messageDto.getUserId(), messageDto.getCurrencyCode(), messageDto.getAmount());
+        streamBridge.send("transactionMessage-out-0", transactionMessage);
     }
 
     private void finishDeposit(Long userId, String currencyCode, BigDecimal amount) {
@@ -125,14 +120,9 @@ public class AccountServiceImpl implements AccountService {
             throw new CustomizedException(ExceptionMessage.UNKNOWN_CURRENCY, currencyCode);
         }
 
-        var withdrawMessage = new WithdrawMessageDto(userId, currencyCode, amount);
+        var transactionMessage = new TransactionMessageDto(TransactionType.WITHDRAW, userId, currencyCode, amount);
 
-        streamBridge.send("withdrawMessage-out-0", withdrawMessage);
-    }
-
-    @Override
-    public void finishWithdraw(WithdrawMessageDto messageDto) {
-        this.finishWithdraw(messageDto.getUserId(), messageDto.getCurrencyCode(), messageDto.getAmount());
+        streamBridge.send("transactionMessage-out-0", transactionMessage);
     }
 
     private void finishWithdraw(Long userId, String currencyCode, BigDecimal amount) {
@@ -158,6 +148,17 @@ public class AccountServiceImpl implements AccountService {
         var commonServerEvent = new CommonServerEvent(userId, savedAccount, String.format("Successfully withdrawn %s %s", amount, currencyCode));
 
         commonServerEventEmitSink.tryEmitNext(commonServerEvent);
+    }
+
+    @Override
+    public void finishTransaction(TransactionMessageDto messageDto) {
+
+        switch (messageDto.getTransactionType()) {
+            case TransactionType.DEPOSIT -> finishDeposit(messageDto.getUserId(), messageDto.getCurrencyCode(), messageDto.getAmount());
+            case TransactionType.WITHDRAW -> finishWithdraw(messageDto.getUserId(), messageDto.getCurrencyCode(), messageDto.getAmount());
+            default -> log.error("Unknown transaction type: {}", messageDto.getTransactionType());
+        }
+
     }
 
 
