@@ -1,6 +1,6 @@
 package com.exchange.spring.service.impl;
 
-import com.exchange.spring.dto.response.ExchangeRateResponseDto;
+import com.exchange.spring.model.dto.response.ExchangeRateResponseDto;
 import com.exchange.spring.model.ExchangeRateTemp;
 import com.exchange.spring.repository.redis.ExhangeRateTempRepository;
 import com.exchange.spring.service.ExchangeRateService;

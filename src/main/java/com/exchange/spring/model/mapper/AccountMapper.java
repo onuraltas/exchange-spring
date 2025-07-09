@@ -1,7 +1,7 @@
-package com.exchange.spring.mapper;
+package com.exchange.spring.model.mapper;
 
-import com.exchange.spring.dto.AccountDto;
-import com.exchange.spring.entity.Account;
+import com.exchange.spring.model.dto.AccountDto;
+import com.exchange.spring.model.entity.Account;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

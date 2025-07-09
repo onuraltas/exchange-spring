@@ -1,7 +1,7 @@
 package com.exchange.spring.service.impl;
 
-import com.exchange.spring.dto.event.CommonServerEventDto;
-import com.exchange.spring.mapper.AccountMapper;
+import com.exchange.spring.model.dto.event.CommonServerEventDto;
+import com.exchange.spring.model.mapper.AccountMapper;
 import com.exchange.spring.model.CommonServerEvent;
 import com.exchange.spring.service.NotifyService;
 import com.exchange.spring.util.WebUtils;

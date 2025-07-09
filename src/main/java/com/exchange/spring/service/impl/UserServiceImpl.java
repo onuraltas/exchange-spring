@@ -1,10 +1,10 @@
 package com.exchange.spring.service.impl;
 
-import com.exchange.spring.dto.UserDto;
-import com.exchange.spring.entity.User;
+import com.exchange.spring.model.dto.UserDto;
+import com.exchange.spring.model.entity.User;
 import com.exchange.spring.enums.ExceptionMessage;
 import com.exchange.spring.exception.CustomizedException;
-import com.exchange.spring.mapper.UserMapper;
+import com.exchange.spring.model.mapper.UserMapper;
 import com.exchange.spring.repository.jpa.UserRepository;
 import com.exchange.spring.service.UserService;
 import lombok.RequiredArgsConstructor;

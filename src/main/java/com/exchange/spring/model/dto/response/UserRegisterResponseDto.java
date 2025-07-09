@@ -1,6 +1,6 @@
-package com.exchange.spring.dto.response;
+package com.exchange.spring.model.dto.response;
 
-import com.exchange.spring.dto.UserDto;
+import com.exchange.spring.model.dto.UserDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

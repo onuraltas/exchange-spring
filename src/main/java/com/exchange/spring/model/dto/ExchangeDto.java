@@ -1,4 +1,4 @@
-package com.exchange.spring.dto;
+package com.exchange.spring.model.dto;
 
 import lombok.Data;
 

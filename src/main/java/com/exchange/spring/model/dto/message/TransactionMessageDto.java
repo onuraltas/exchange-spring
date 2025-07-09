@@ -1,4 +1,4 @@
-package com.exchange.spring.dto.message;
+package com.exchange.spring.model.dto.message;
 
 import com.exchange.spring.enums.TransactionType;
 import jakarta.validation.constraints.NotBlank;

@@ -1,15 +1,15 @@
 package com.exchange.spring.service.impl;
 
-import com.exchange.spring.dto.AccountDto;
-import com.exchange.spring.dto.message.TransactionMessageDto;
-import com.exchange.spring.dto.request.DepositRequestDto;
-import com.exchange.spring.dto.request.WithdrawRequestDto;
-import com.exchange.spring.dto.response.RetrieveBalanceResponseDto;
-import com.exchange.spring.entity.Account;
+import com.exchange.spring.model.dto.AccountDto;
+import com.exchange.spring.model.dto.message.TransactionMessageDto;
+import com.exchange.spring.model.dto.request.DepositRequestDto;
+import com.exchange.spring.model.dto.request.WithdrawRequestDto;
+import com.exchange.spring.model.dto.response.RetrieveBalanceResponseDto;
+import com.exchange.spring.model.entity.Account;
 import com.exchange.spring.enums.ExceptionMessage;
 import com.exchange.spring.enums.TransactionType;
 import com.exchange.spring.exception.CustomizedException;
-import com.exchange.spring.mapper.AccountMapper;
+import com.exchange.spring.model.mapper.AccountMapper;
 import com.exchange.spring.model.CommonServerEvent;
 import com.exchange.spring.repository.jpa.AccountRepository;
 import com.exchange.spring.service.AccountService;

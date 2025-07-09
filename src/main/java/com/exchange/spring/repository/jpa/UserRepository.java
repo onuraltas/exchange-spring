@@ -1,6 +1,6 @@
 package com.exchange.spring.repository.jpa;
 
-import com.exchange.spring.entity.User;
+import com.exchange.spring.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

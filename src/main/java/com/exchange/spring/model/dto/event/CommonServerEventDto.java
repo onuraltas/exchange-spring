@@ -1,6 +1,6 @@
-package com.exchange.spring.dto.event;
+package com.exchange.spring.model.dto.event;
 
-import com.exchange.spring.dto.AccountDto;
+import com.exchange.spring.model.dto.AccountDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

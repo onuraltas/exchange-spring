@@ -1,10 +1,10 @@
 package com.exchange.spring.controller.impl;
 
 import com.exchange.spring.controller.AuthController;
-import com.exchange.spring.dto.request.UserLoginRequestDto;
-import com.exchange.spring.dto.request.UserRegisterRequestDto;
-import com.exchange.spring.dto.response.UserLoginResponseDto;
-import com.exchange.spring.dto.response.UserRegisterResponseDto;
+import com.exchange.spring.model.dto.request.UserLoginRequestDto;
+import com.exchange.spring.model.dto.request.UserRegisterRequestDto;
+import com.exchange.spring.model.dto.response.UserLoginResponseDto;
+import com.exchange.spring.model.dto.response.UserRegisterResponseDto;
 import com.exchange.spring.enums.ExceptionMessage;
 import com.exchange.spring.exception.CustomizedException;
 import com.exchange.spring.security.JwtTokenProvider;

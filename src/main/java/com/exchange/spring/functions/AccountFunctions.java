@@ -1,6 +1,6 @@
 package com.exchange.spring.functions;
 
-import com.exchange.spring.dto.message.TransactionMessageDto;
+import com.exchange.spring.model.dto.message.TransactionMessageDto;
 import com.exchange.spring.service.AccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;

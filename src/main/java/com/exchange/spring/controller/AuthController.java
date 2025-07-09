@@ -1,9 +1,9 @@
 package com.exchange.spring.controller;
 
-import com.exchange.spring.dto.request.UserLoginRequestDto;
-import com.exchange.spring.dto.request.UserRegisterRequestDto;
-import com.exchange.spring.dto.response.UserLoginResponseDto;
-import com.exchange.spring.dto.response.UserRegisterResponseDto;
+import com.exchange.spring.model.dto.request.UserLoginRequestDto;
+import com.exchange.spring.model.dto.request.UserRegisterRequestDto;
+import com.exchange.spring.model.dto.response.UserLoginResponseDto;
+import com.exchange.spring.model.dto.response.UserRegisterResponseDto;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

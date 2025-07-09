@@ -1,6 +1,6 @@
 package com.exchange.spring.model;
 
-import com.exchange.spring.entity.Account;
+import com.exchange.spring.model.entity.Account;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,6 @@
 package com.exchange.spring.util;
 
-import com.exchange.spring.entity.User;
+import com.exchange.spring.model.entity.User;
 import com.exchange.spring.enums.ExceptionMessage;
 import com.exchange.spring.exception.CustomizedException;
 import com.exchange.spring.repository.jpa.UserRepository;

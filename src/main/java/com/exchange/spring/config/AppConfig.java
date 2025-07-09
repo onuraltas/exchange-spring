@@ -11,7 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Sinks;
 
-@EntityScan("com.exchange.spring.entity")
+@EntityScan("com.exchange.spring.model.entity")
 @EnableJpaRepositories("com.exchange.spring.repository.jpa")
 @Configuration
 public class AppConfig {

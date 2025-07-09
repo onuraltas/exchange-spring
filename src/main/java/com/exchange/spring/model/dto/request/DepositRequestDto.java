@@ -1,4 +1,4 @@
-package com.exchange.spring.dto.request;
+package com.exchange.spring.model.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -9,7 +9,7 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Data
-public class WithdrawRequestDto {
+public class DepositRequestDto {
 
     @NotBlank(message = "Currency code is required")
     @Size(min = 3, max = 3)

@@ -1,7 +1,7 @@
 package com.exchange.spring.controller;
 
-import com.exchange.spring.dto.request.ExchangeRequestDto;
-import com.exchange.spring.dto.response.ExchangeResponseDto;
+import com.exchange.spring.model.dto.request.ExchangeRequestDto;
+import com.exchange.spring.model.dto.response.ExchangeResponseDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;

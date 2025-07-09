@@ -1,7 +1,7 @@
 package com.exchange.spring.controller.impl;
 
 import com.exchange.spring.controller.NotifyController;
-import com.exchange.spring.dto.event.CommonServerEventDto;
+import com.exchange.spring.model.dto.event.CommonServerEventDto;
 import com.exchange.spring.service.NotifyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;

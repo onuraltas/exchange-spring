@@ -1,6 +1,6 @@
 package com.exchange.spring.service;
 
-import com.exchange.spring.dto.UserDto;
+import com.exchange.spring.model.dto.UserDto;
 
 public interface UserService {
 

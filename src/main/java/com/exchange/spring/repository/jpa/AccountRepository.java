@@ -1,6 +1,6 @@
 package com.exchange.spring.repository.jpa;
 
-import com.exchange.spring.entity.Account;
+import com.exchange.spring.model.entity.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 

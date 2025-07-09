@@ -1,8 +1,8 @@
 package com.exchange.spring.controller.impl;
 
 import com.exchange.spring.controller.ExchangeController;
-import com.exchange.spring.dto.request.ExchangeRequestDto;
-import com.exchange.spring.dto.response.ExchangeResponseDto;
+import com.exchange.spring.model.dto.request.ExchangeRequestDto;
+import com.exchange.spring.model.dto.response.ExchangeResponseDto;
 import com.exchange.spring.service.ExchangeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

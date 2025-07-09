@@ -1,4 +1,4 @@
-package com.exchange.spring.dto.request;
+package com.exchange.spring.model.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -9,15 +9,11 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Data
-public class ExchangeRequestDto {
+public class WithdrawRequestDto {
 
-    @NotBlank(message = "Source currency code is required")
+    @NotBlank(message = "Currency code is required")
     @Size(min = 3, max = 3)
-    private String sourceCurrencyCode;
-
-    @NotBlank(message = "Target currency code is required")
-    @Size(min = 3, max = 3)
-    private String targetCurrencyCode;
+    private String currencyCode;
 
     @NotNull(message = "Amount is required")
     @Positive(message = "The amount should be a positive number")

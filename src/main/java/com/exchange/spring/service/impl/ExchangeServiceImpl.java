@@ -1,12 +1,12 @@
 package com.exchange.spring.service.impl;
 
-import com.exchange.spring.dto.request.ExchangeRequestDto;
-import com.exchange.spring.dto.response.ExchangeResponseDto;
-import com.exchange.spring.entity.Account;
-import com.exchange.spring.entity.Exchange;
+import com.exchange.spring.model.dto.request.ExchangeRequestDto;
+import com.exchange.spring.model.dto.response.ExchangeResponseDto;
+import com.exchange.spring.model.entity.Account;
+import com.exchange.spring.model.entity.Exchange;
 import com.exchange.spring.enums.ExceptionMessage;
 import com.exchange.spring.exception.CustomizedException;
-import com.exchange.spring.mapper.ExchangeMapper;
+import com.exchange.spring.model.mapper.ExchangeMapper;
 import com.exchange.spring.model.CommonServerEvent;
 import com.exchange.spring.repository.jpa.AccountRepository;
 import com.exchange.spring.repository.jpa.ExchangeRepository;

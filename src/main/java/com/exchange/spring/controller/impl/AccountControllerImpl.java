@@ -1,10 +1,10 @@
 package com.exchange.spring.controller.impl;
 
 import com.exchange.spring.controller.AccountController;
-import com.exchange.spring.dto.AccountDto;
-import com.exchange.spring.dto.request.DepositRequestDto;
-import com.exchange.spring.dto.request.WithdrawRequestDto;
-import com.exchange.spring.dto.response.RetrieveBalanceResponseDto;
+import com.exchange.spring.model.dto.AccountDto;
+import com.exchange.spring.model.dto.request.DepositRequestDto;
+import com.exchange.spring.model.dto.request.WithdrawRequestDto;
+import com.exchange.spring.model.dto.response.RetrieveBalanceResponseDto;
 import com.exchange.spring.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

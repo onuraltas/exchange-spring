@@ -1,7 +1,7 @@
 package com.exchange.spring;
 
-import com.exchange.spring.dto.request.ExchangeRequestDto;
-import com.exchange.spring.entity.Account;
+import com.exchange.spring.model.dto.request.ExchangeRequestDto;
+import com.exchange.spring.model.entity.Account;
 import com.exchange.spring.repository.jpa.AccountRepository;
 import com.exchange.spring.repository.jpa.ExchangeRepository;
 import com.exchange.spring.service.ExchangeRateService;
