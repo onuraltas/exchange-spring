@@ -1,7 +1,7 @@
 services:
   rabbitmq:
     image: rabbitmq:4-management
-    container_name: rabbitmq-server
+    container_name: rabbitmq-server-dc
     restart: always
     ports:
       - 5672:5672
@@ -11,7 +11,7 @@ services:
       RABBITMQ_DEFAULT_PASS: admin
   redis:
     image: redis:7
-    container_name: redis-server
+    container_name: redis-server-dc
     restart: always
     ports:
       - 6379:6379
