@@ -40,7 +40,7 @@ spring:
           group: ${spring.application.name}
 
   rabbitmq:
-    host: rabbitmq-dc-server
+    host: rabbitmq-server-dc
     port: 5672
     username: admin
     password: admin
@@ -48,7 +48,7 @@ spring:
 
   data:
     redis:
-      host: redis-dc-server
+      host: redis-server-dc
       port: 6379
       client:
         config:
