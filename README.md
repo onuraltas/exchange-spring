@@ -3,7 +3,7 @@
   * run these two command in terminal;
     - docker run --detach -it --name rabbitmq-server -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin rabbitmq:4-management
     - docker run -p 6379:6379 --name redis-server -d redis:7
-
+      
   * add his line to the environment variables if you are running with an IDE;
       - SPRING_PROFILES_ACTIVE=dev
 
